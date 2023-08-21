@@ -34,6 +34,7 @@ public class Application {
         var venda = new Venda();
 
         venda.setCliente(cliente);
+
         venda.addItem(new ItemVenda(produto1));
         venda.addItem(new ItemVenda(produto2));
 
