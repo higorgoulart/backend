@@ -1,5 +1,6 @@
 package org.example.models;
 
+import org.example.enums.TipoOperacao;
 import org.example.interfaces.OperacaoFinanceira;
 
 import java.time.LocalDate;
@@ -39,6 +40,24 @@ public class Balanco extends Entity {
         this.operacoes.remove(operacao);
     }
 
+    public String getTipoOperacao(OperacaoFinanceira operacao) {
+        if (operacao instanceof Compra) {
+            return "Compra";
+        }
+
+        if (operacao instanceof Venda) {
+            return "Venda";
+        }
+
+        return "Locação";
+    }
+    public Double getValorTotal(TipoOperacao tipo) {
+        return this.getOperacoes().stream()
+                .filter(op -> op.getTipoOperacao().equals(tipo))
+                .mapToDouble(OperacaoFinanceira::getValorTotalOperacao)
+                .sum();
+    }
+
     public void imprimirBalanco() {
         System.out.println("---------");
         System.out.println("Balanço número: " + this.getId());
@@ -50,8 +69,12 @@ public class Balanco extends Entity {
         this.getOperacoes().forEach(operacao -> System.out.println(
                 "Data operação: " + operacao.getDataOperacao() +
                 " Tipo operação: " + operacao.getTipoOperacao() +
-                " Valor operação: " + operacao.getValorTotalOperacao()));
+                " Valor operação: " + operacao.getValorTotalOperacao() +
+                " - (" + this.getTipoOperacao(operacao) + ")"));
 
         System.out.println("---------");
+        System.out.println("Total débitos: " + this.getValorTotal(TipoOperacao.DEBITO));
+        System.out.println("Total créditos: " + this.getValorTotal(TipoOperacao.CREDITO));
+        System.out.println("Total: " + (this.getValorTotal(TipoOperacao.CREDITO) - this.getValorTotal(TipoOperacao.DEBITO)));
     }
 }
