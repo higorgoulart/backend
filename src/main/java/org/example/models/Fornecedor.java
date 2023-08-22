@@ -21,6 +21,11 @@ public class Fornecedor extends Pessoa {
     }
 
     @Override
+    public String getDocumentoPrincipal() {
+        return this.getCnpj();
+    }
+
+    @Override
     public String toString() {
         return "Fornecedor{" +
                 "cnpj='" + cnpj + '\'' +

@@ -1,12 +1,14 @@
 package org.example.models;
 
 import org.example.enums.FormaPagamento;
+import org.example.enums.TipoOperacao;
+import org.example.interfaces.OperacaoFinanceira;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Venda extends Entity {
+public class Venda extends Entity implements OperacaoFinanceira {
     private LocalDate dataVenda;
     private FormaPagamento formaPagamento;
     private String observacao;
@@ -58,13 +60,17 @@ public class Venda extends Entity {
     }
 
     @Override
-    public String toString() {
-        return "Venda{" +
-                "dataVenda=" + dataVenda +
-                ", formaPagamento=" + formaPagamento +
-                ", observacao='" + observacao + '\'' +
-                ", cliente=" + cliente +
-                ", itens=" + itens +
-                "} " + super.toString();
+    public LocalDate getDataOperacao() {
+        return this.getDataVenda();
+    }
+
+    @Override
+    public Double getValorTotalOperacao() {
+        return this.getItens().stream().mapToDouble(ItemVenda::getValorCalculado).sum();
+    }
+
+    @Override
+    public TipoOperacao getTipoOperacao() {
+        return TipoOperacao.CREDITO;
     }
 }

@@ -17,4 +17,16 @@ public class Servico extends ItemVendavel {
     public void setQuantidadeHoras(Double quantidadeHoras) {
         this.quantidadeHoras = quantidadeHoras;
     }
+
+    @Override
+    public Boolean getEstocavel() {
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Servico{" +
+                "quantidadeHoras=" + quantidadeHoras +
+                "} " + super.toString();
+    }
 }

@@ -3,8 +3,7 @@ package org.example.enums;
 public enum FormaPagamento {
     BOLETO,
     CHEQUE,
-    CREDITO,
-    DEBITO,
+    CARTAO,
     DINHEIRO,
     PIX
 }

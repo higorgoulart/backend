@@ -2,42 +2,53 @@ package org.example;
 
 import org.example.models.*;
 
+import java.time.LocalDate;
+
 public class Application {
     public static void main(String[] args) {
-        var dell = new Fornecedor();
-
-        dell.setNome("Dell LTDA");
-        dell.setCnpj("");
-        dell.setIe("111151-10");
-        dell.setEmail("dell@yahoo.com.br");
-        dell.setTelefone("48 99999-9999");
-        dell.setEndereco("Rua dos Bobos, Nº 0");
-
-        System.out.println(dell);
+        var fornecedor = new Fornecedor();
+        fornecedor.setNome("Dell Ltda");
 
         var cliente = new Cliente();
+        cliente.setNome("Bruno Kurzawe");
 
-        cliente.setNome("Higor");
-        cliente.setCpf("000.000.000-00");
-        cliente.setRg("00.000.000-0");
-        cliente.setEmail("higor@yahoo.com.br");
-        cliente.setTelefone("48 99999-9999");
-        cliente.setEndereco("Rua dos Bobos, Nº 0");
+        var produto = new Produto("Computador", "I5 8gb");
+        var servico = new Servico("Instalação Office", 2.0, 100.00);
 
-        System.out.println(cliente);
-
-        var produto1 = new Produto("", "", 0.0);
-        produto1.setNome("Claudio");
-        var produto2 = new Produto("", "", 0.0);
-        produto2.setNome("Claudio 2");
+        var compra = new Compra();
+        compra.setDataCompra(LocalDate.now());
+        compra.setFornecedor(fornecedor);
+        var itemC1 = new ItemCompra(produto, 1000.00, 10.0, 10.0);
+        compra.addItem(itemC1);
 
         var venda = new Venda();
-
+        venda.setDataVenda(LocalDate.now());
         venda.setCliente(cliente);
+        var item = new ItemVenda(produto, 1500.00, 1.0, 10.0);
+        venda.addItem(item);
 
-        venda.addItem(new ItemVenda(produto1));
-        venda.addItem(new ItemVenda(produto2));
+        var venda2 = new Venda();
+        venda2.setDataVenda(LocalDate.now());
+        venda2.setCliente(cliente);
+        var item2 = new ItemVenda(produto, 1500.00, 1.0, 10.0);
+        venda2.addItem(item2);
+        var item3 = new ItemVenda(servico, 150.00, 1.0, 10.0);
+        venda2.addItem(item3);
 
-        System.out.println(venda.getItens());
+        var locacao = new Locacao();
+        locacao.setCliente(cliente);
+        locacao.setDataLocacao(LocalDate.now());
+        var itemL1 = new ItemLocacao(produto, 150.00, 10.0, 0.0);
+        locacao.addItem(itemL1);
+
+        var balanco = new Balanco();
+        balanco.setId(352578L);
+        balanco.setDataBalanco(LocalDate.now());
+        balanco.setResponsavel("Maria Luiza");
+        balanco.addOperacao(venda);
+        balanco.addOperacao(venda2);
+        balanco.addOperacao(compra);
+        balanco.addOperacao(locacao);
+        balanco.imprimirBalanco();
     }
 }

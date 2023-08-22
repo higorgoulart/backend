@@ -1,16 +1,24 @@
 package org.example.models;
 
-public class ItemVenda extends Entity {
-    private ItemVendavel produtoServico;
+public class Item extends Entity {
+    private Produto produto;
     private Double valorUnitario;
     private Double quantidade;
     private Double desconto;
 
-    public ItemVenda(ItemVendavel produtoServico, Double valorUnitario, Double quantidade, Double desconto) {
-        this.produtoServico = produtoServico;
+    public Item(Produto produto, Double valorUnitario, Double quantidade, Double desconto) {
+        this.produto = produto;
         this.valorUnitario = valorUnitario;
         this.quantidade = quantidade;
         this.desconto = desconto;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
 
     public Double getValorUnitario() {
@@ -41,15 +49,5 @@ public class ItemVenda extends Entity {
         double valorTotal = this.getValorUnitario() * this.getQuantidade();
         double descontoCalculado = valorTotal * (this.getDesconto() / 100);
         return valorTotal - descontoCalculado;
-    }
-
-    @Override
-    public String toString() {
-        return "ItemVenda{" +
-                "produtoServico=" + produtoServico +
-                ", valorUnitario=" + valorUnitario +
-                ", quantidade=" + quantidade +
-                ", desconto=" + desconto +
-                "} " + super.toString();
     }
 }

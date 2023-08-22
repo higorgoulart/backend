@@ -11,9 +11,8 @@ public class Produto extends ItemVendavel {
     private LocalDate dataPrazo;
     private Status status;
 
-    public Produto(String nome, String descricao, Double valorUnitario) {
+    public Produto(String nome, String descricao) {
         super.setDescricao(descricao);
-        super.setValorUnitario(valorUnitario);
 
         this.nome = nome;
     }
@@ -56,5 +55,20 @@ public class Produto extends ItemVendavel {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Double calcularMargemLucro() {
+        return (super.getValorUnitario() - precoCompra / super.getValorUnitario()) * 100;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", precoCompra=" + precoCompra +
+                ", dataValidade=" + dataValidade +
+                ", dataPrazo=" + dataPrazo +
+                ", status=" + status +
+                "} " + super.toString();
     }
 }

@@ -21,6 +21,11 @@ public class Cliente extends Pessoa {
     }
 
     @Override
+    public String getDocumentoPrincipal() {
+        return this.getCpf();
+    }
+
+    @Override
     public String toString() {
         return "Cliente{" +
                 "cpf='" + cpf + '\'' +
