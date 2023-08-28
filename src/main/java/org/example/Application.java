@@ -50,5 +50,14 @@ public class Application {
         balanco.addOperacao(compra);
         balanco.addOperacao(locacao);
         balanco.imprimirBalanco();
+
+        try {
+            var produto1 = new Produto("Computador", "I5 8gb");
+
+            produto1.setPrecoCompra(1200.0);
+            produto1.setPrecoVenda(1400.0);
+        } catch (MargemLucroException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 }

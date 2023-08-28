@@ -57,8 +57,15 @@ public class Produto extends ItemVendavel {
         this.status = status;
     }
 
+    public void setPrecoVenda(Double precoVenda) throws MargemLucroException {
+        super.setValorUnitario(precoVenda);
+
+        if (this.calcularMargemLucro() < 20.0) {
+            throw new MargemLucroException();
+        }
+    }
     public Double calcularMargemLucro() {
-        return (super.getValorUnitario() - precoCompra / super.getValorUnitario()) * 100;
+        return ((super.getValorUnitario() - precoCompra) / super.getValorUnitario()) * 100;
     }
 
     @Override

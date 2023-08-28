@@ -59,7 +59,7 @@ public class Compra extends Entity implements OperacaoFinanceira {
     }
 
     @Override
-    public Double getValorTotalOperacao() {
+    public Double getValorOperacao() {
         return this.getItens().stream().mapToDouble(ItemCompra::getValorCalculado).sum();
     }
 

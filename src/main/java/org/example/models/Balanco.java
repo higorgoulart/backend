@@ -51,10 +51,11 @@ public class Balanco extends Entity {
 
         return "Locação";
     }
+
     public Double getValorTotal(TipoOperacao tipo) {
         return this.getOperacoes().stream()
                 .filter(op -> op.getTipoOperacao().equals(tipo))
-                .mapToDouble(OperacaoFinanceira::getValorTotalOperacao)
+                .mapToDouble(OperacaoFinanceira::getValorOperacao)
                 .sum();
     }
 
@@ -69,12 +70,16 @@ public class Balanco extends Entity {
         this.getOperacoes().forEach(operacao -> System.out.println(
                 "Data operação: " + operacao.getDataOperacao() +
                 " Tipo operação: " + operacao.getTipoOperacao() +
-                " Valor operação: " + operacao.getValorTotalOperacao() +
+                " Valor operação: " + operacao.getValorOperacao() +
                 " - (" + this.getTipoOperacao(operacao) + ")"));
 
         System.out.println("---------");
-        System.out.println("Total débitos: " + this.getValorTotal(TipoOperacao.DEBITO));
-        System.out.println("Total créditos: " + this.getValorTotal(TipoOperacao.CREDITO));
-        System.out.println("Total: " + (this.getValorTotal(TipoOperacao.CREDITO) - this.getValorTotal(TipoOperacao.DEBITO)));
+
+        var debito = this.getValorTotal(TipoOperacao.DEBITO);
+        var credito = this.getValorTotal(TipoOperacao.CREDITO);
+
+        System.out.println("Total débitos: " + debito);
+        System.out.println("Total créditos: " + credito);
+        System.out.println("Total: " + (credito - debito));
     }
 }
