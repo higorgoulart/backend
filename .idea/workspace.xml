@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f71f0b-08d9-4d7d-b153-0ce6e1399449" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/MargemLucroException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/interfaces/OperacaoFinanceira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/interfaces/OperacaoFinanceira.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Balanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Balanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Locacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Venda.java" afterDir="false" />
-    </list>
+    <list default="true" id="bafd8ed3-d8cd-4bc9-8ab1-ad550d531e06" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,57 +16,52 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SET_USER_NAME_GLOBALLY" value="false" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="2TzgiMYxzUSEuK35lBTU7Js1PCb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2UdPcJdIwXCyGIrrF6doyHmf1Un" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "preferences.general"
+    "last_opened_file_path": "C:/Users/higor.1370711/Documents/backend",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.models" />
-      <recent name="org.example.enums" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\higor.1370711\Documents\satc-loja\src\main\java\com\satc\satcloja" />
     </key>
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn install gson" />
-    </option>
-  </component>
   <component name="RunManager">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Application" />
-      <module name="backend" />
+    <configuration name="SatcLojaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satc.satcloja.SatcLojaApplication" />
+      <module name="satc-loja" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="com.satc.satcloja.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,70 +71,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.SatcLojaApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9f71f0b-08d9-4d7d-b153-0ce6e1399449" name="Changes" comment="" />
-      <created>1692051451582</created>
+      <changelist id="bafd8ed3-d8cd-4bc9-8ab1-ad550d531e06" name="Changes" comment="" />
+      <created>1693266562393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1692051451582</updated>
+      <updated>1693266562393</updated>
     </task>
-    <task id="LOCAL-00001" summary="init">
-      <created>1692052110095</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1692052110095</updated>
-    </task>
-    <task id="LOCAL-00002" summary="init">
-      <created>1692060260093</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1692060260093</updated>
-    </task>
-    <task id="LOCAL-00003" summary="init">
-      <created>1692655472396</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1692655472396</updated>
-    </task>
-    <task id="LOCAL-00004" summary="init">
-      <created>1692664228294</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1692664228294</updated>
-    </task>
-    <task id="LOCAL-00005" summary="init">
-      <created>1692665111502</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1692665111502</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
