@@ -14,16 +14,16 @@ public class Venda extends EntityId implements OperacaoFinanceira {
     @Column(name = "dt_venda")
     private LocalDate dataVenda;
 
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "forma_pgto")
     private FormaPagamento formaPagamento;
 
     @Column(name = "observacao")
     private String observacao;
-
-    @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private Cliente cliente;
 
     @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
     private List<ItemVenda> itens = new ArrayList<>();
@@ -65,6 +65,7 @@ public class Venda extends EntityId implements OperacaoFinanceira {
     }
 
     public void addItem(ItemVenda item) {
+        item.setVenda(this);
         this.itens.add(item);
     }
 

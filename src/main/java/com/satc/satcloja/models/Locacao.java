@@ -78,6 +78,7 @@ public class Locacao extends EntityId implements OperacaoFinanceira {
     }
 
     public void addItem(ItemLocacao item) {
+        item.setLocacao(this);
         this.itens.add(item);
     }
 

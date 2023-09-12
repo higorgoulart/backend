@@ -56,6 +56,7 @@ public class Compra extends EntityId implements OperacaoFinanceira {
     }
 
     public void addItem(ItemCompra item) {
+        item.setCompra(this);
         this.itens.add(item);
     }
 

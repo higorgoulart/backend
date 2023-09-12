@@ -11,13 +11,13 @@ public class ItemVenda extends EntityId {
     @JoinColumn(name = "produto_servico_id")
     private ItemVendavel produtoServico;
 
-    @Column(name = "valor_unitario")
+    @Column(name = "valor_unitario", nullable = false)
     private Double valorUnitario;
 
-    @Column(name = "quantidade")
+    @Column(name = "quantidade", nullable = false)
     private Double quantidade;
 
-    @Column(name = "desconto")
+    @Column(name = "desconto", nullable = false)
     private Double desconto;
 
     @ManyToOne
@@ -53,6 +53,22 @@ public class ItemVenda extends EntityId {
 
     public void setDesconto(Double desconto) {
         this.desconto = desconto;
+    }
+
+    public ItemVendavel getProdutoServico() {
+        return produtoServico;
+    }
+
+    public void setProdutoServico(ItemVendavel produtoServico) {
+        this.produtoServico = produtoServico;
+    }
+
+    public Venda getVenda() {
+        return venda;
+    }
+
+    public void setVenda(Venda venda) {
+        this.venda = venda;
     }
 
     public Double getValorCalculado() {

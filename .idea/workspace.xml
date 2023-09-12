@@ -4,8 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bafd8ed3-d8cd-4bc9-8ab1-ad550d531e06" name="Changes" comment="api">
+    <list default="true" id="bafd8ed3-d8cd-4bc9-8ab1-ad550d531e06" name="Changes" comment="mapping">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/CompraRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/FornecedorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/LocacaoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/ServicoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/repositories/VendaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/health/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/health/HealthCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemLocacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemLocacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemVenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemVenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemVendavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/ItemVendavel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Locacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Locacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Servico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Servico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satc/satcloja/models/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -43,24 +62,30 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2UdPcJdIwXCyGIrrF6doyHmf1Un" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/higor.1370711/Documents/backend",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/higor.1370711/Documents/backend&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\higor.1370711\Documents\satc-loja\src\main\java\com\satc\satcloja" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.satc.satcloja.repositories" />
     </key>
   </component>
   <component name="RunManager">
@@ -106,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693865167792</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mapping">
+      <created>1693873694713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693873694713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="api" />
-    <option name="LAST_COMMIT_MESSAGE" value="api" />
+    <MESSAGE value="mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="mapping" />
   </component>
 </project>
